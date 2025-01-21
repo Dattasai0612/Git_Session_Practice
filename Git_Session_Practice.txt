@@ -1,0 +1,569 @@
+DSG@Datta MINGW64 ~
+$ cd ..
+
+DSG@Datta MINGW64 /c/Users
+$ cd DSG/
+
+DSG@Datta MINGW64 ~
+$ cd OneDrive/
+
+DSG@Datta MINGW64 ~/OneDrive
+$ cd desktop
+
+DSG@Datta MINGW64 ~/OneDrive/desktop
+$ ls
+ Data/                   'Google Chrome.lnk'*         '~$Athvik.docx'
+'Git Arch.jpg'            Jersey.mp4                  '~$Git_Session.pptx'
+'Git Bash.lnk'*           Lark.lnk*                   '~$Programming.docx'
+ Git_Cheat_Sheet.jpg      TS_Dattasai.docx            '~$Tata.xlsx'
+ Git_Practice_Notes.txt   remote/                     '~$organs.docx'
+ Git_Session.pptx        '~$ Mini Project1 (1).docx'  '~$va Simple programs.pdf'
+
+DSG@Datta MINGW64 ~/OneDrive/desktop
+$ mkdir practice
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice
+$ ls
+data
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice
+$ cat data
+hello
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice
+$ git add data
+fatal: not a git repository (or any of the parent directories): .git
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice
+$ git init
+Initialized empty Git repository in C:/Users/DSG/OneDrive/Desktop/practice/.git/
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (master)
+$ git add data
+warning: in the working copy of 'data', LF will be replaced by CRLF the next time Git touches it
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (master)
+$ git commit -m "added"
+[master (root-commit) 92b1f81] added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 data
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (master)
+$ git log
+commit 92b1f813e3c1426c1058da27802a40a403daa856 (HEAD -> master)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 11:39:38 2025 +0530
+
+    added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (master)
+$ git log --oneline
+92b1f81 (HEAD -> master) added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (master)
+$ git branch -M main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git remote add origin https://github.com/Dattasai0612/prac
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 210 bytes | 210.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Dattasai0612/prac
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ vi new
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ cat new
+good morning
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git add new
+warning: in the working copy of 'new', LF will be replaced by CRLF the next time Git touches it
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git commit -m "new"
+[main 9b5d3b9] new
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git show
+commit 9b5d3b9edc5c3eca4e06a858d4b34457520aa76b (HEAD -> main)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:14:02 2025 +0530
+
+    new
+
+diff --git a/new b/new
+new file mode 100644
+index 0000000..b1eb873
+--- /dev/null
++++ b/new
+@@ -0,0 +1 @@
++good morning
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git log
+commit 9b5d3b9edc5c3eca4e06a858d4b34457520aa76b (HEAD -> main)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:14:02 2025 +0530
+
+    new
+
+commit 92b1f813e3c1426c1058da27802a40a403daa856 (origin/main)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 11:39:38 2025 +0530
+
+    added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git log -n 2
+commit 9b5d3b9edc5c3eca4e06a858d4b34457520aa76b (HEAD -> main)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:14:02 2025 +0530
+
+    new
+
+commit 92b1f813e3c1426c1058da27802a40a403daa856 (origin/main)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 11:39:38 2025 +0530
+
+    added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 274 bytes | 274.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Dattasai0612/prac
+   92b1f81..9b5d3b9  main -> main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ vi old
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ cat old
+hi hi hi
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git add .
+warning: in the working copy of 'old', LF will be replaced by CRLF the next time Git touches it
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git commit -m "old"
+[main 9b54fd2] old
+ 1 file changed, 1 insertion(+)
+ create mode 100644 old
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Dattasai0612/prac
+   9b5d3b9..9b54fd2  main -> main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch
+* main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch master
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch
+* main
+  master
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git checkout master
+Switched to branch 'master'
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (master)
+$ git branch
+  main
+* master
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (master)
+$ git branch -d master
+error: cannot delete branch 'master' used by worktree at 'C:/Users/DSG/OneDrive/Desktop/practice'
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (master)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch
+* main
+  master
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch -d master
+Deleted branch master (was 9b54fd2).
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch
+* main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git checkout -b animals
+Switched to a new branch 'animals'
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (animals)
+$ git branch
+* animals
+  main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (animals)
+$ git branch -D animals
+error: cannot delete branch 'animals' used by worktree at 'C:/Users/DSG/OneDrive/Desktop/practice'
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (animals)
+$ git branch
+* animals
+  main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (animals)
+$ git checkout -b birds
+Switched to a new branch 'birds'
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git branch
+  animals
+* birds
+  main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ vi dataa
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git add .
+warning: in the working copy of 'dataa', LF will be replaced by CRLF the next time Git touches it
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git commit -m "newly"
+[birds a7e409c] newly
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dataa
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git push
+fatal: The current branch birds has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin birds
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git log
+commit a7e409cb7b555d01ab982ebb8a906e3694c691a1 (HEAD -> birds)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:24:41 2025 +0530
+
+    newly
+
+commit 9b54fd2b4a31a999d4696bb641a860f3b79e0c0a (origin/main, main, animals)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:17:24 2025 +0530
+
+    old
+
+commit 9b5d3b9edc5c3eca4e06a858d4b34457520aa76b
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:14:02 2025 +0530
+
+    new
+
+commit 92b1f813e3c1426c1058da27802a40a403daa856
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 11:39:38 2025 +0530
+
+    added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git push --set-upstream origin birds
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323 bytes | 161.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'birds' on GitHub by visiting:
+remote:      https://github.com/Dattasai0612/prac/pull/new/birds
+remote:
+To https://github.com/Dattasai0612/prac
+ * [new branch]      birds -> birds
+branch 'birds' set up to track 'origin/birds'.
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch -d birds
+warning: deleting branch 'birds' that has been merged to
+         'refs/remotes/origin/birds', but not yet merged to HEAD
+Deleted branch birds (was a7e409c).
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch
+  animals
+* main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch -r
+  origin/birds
+  origin/main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git push origin --delete birds
+To https://github.com/Dattasai0612/prac
+ - [deleted]         birds
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch
+  animals
+* main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch -r
+  origin/main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git checkout -b birds a7e409c
+Switched to a new branch 'birds'
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git branch
+  animals
+* birds
+  main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ ls
+data  dataa  new  old
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git log
+commit a7e409cb7b555d01ab982ebb8a906e3694c691a1 (HEAD -> birds)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:24:41 2025 +0530
+
+    newly
+
+commit 9b54fd2b4a31a999d4696bb641a860f3b79e0c0a (origin/main, main, animals)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:17:24 2025 +0530
+
+    old
+
+commit 9b5d3b9edc5c3eca4e06a858d4b34457520aa76b
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:14:02 2025 +0530
+
+    new
+
+commit 92b1f813e3c1426c1058da27802a40a403daa856
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 11:39:38 2025 +0530
+
+    added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git log --online
+fatal: unrecognized argument: --online
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git log --oneline
+a7e409c (HEAD -> birds) newly
+9b54fd2 (origin/main, main, animals) old
+9b5d3b9 new
+92b1f81 added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git branch -r
+  origin/main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git branch -d birds
+error: cannot delete branch 'birds' used by worktree at 'C:/Users/DSG/OneDrive/Desktop/practice'
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch -d birds
+error: the branch 'birds' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D birds'
+hint: Disable this message with "git config advice.forceDeleteBranch false"
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch -D birds
+Deleted branch birds (was a7e409c).
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git branch
+  animals
+* main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git log --oneline
+9b54fd2 (HEAD -> main, origin/main, animals) old
+9b5d3b9 new
+92b1f81 added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git show
+commit 9b54fd2b4a31a999d4696bb641a860f3b79e0c0a (HEAD -> main, origin/main, animals)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:17:24 2025 +0530
+
+    old
+
+diff --git a/old b/old
+new file mode 100644
+index 0000000..7c7e506
+--- /dev/null
++++ b/old
+@@ -0,0 +1 @@
++hi hi hi
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git log
+commit 9b54fd2b4a31a999d4696bb641a860f3b79e0c0a (HEAD -> main, origin/main, animals)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:17:24 2025 +0530
+
+    old
+
+commit 9b5d3b9edc5c3eca4e06a858d4b34457520aa76b
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:14:02 2025 +0530
+
+    new
+
+commit 92b1f813e3c1426c1058da27802a40a403daa856
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 11:39:38 2025 +0530
+
+    added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git checkout -b birds a7e409c
+Switched to a new branch 'birds'
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git branch
+  animals
+* birds
+  main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git log --oneline
+a7e409c (HEAD -> birds) newly
+9b54fd2 (origin/main, main, animals) old
+9b5d3b9 new
+92b1f81 added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git checkout -b birds a7e409c
+fatal: a branch named 'birds' already exists
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git branch main
+fatal: a branch named 'main' already exists
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (birds)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git checkout -b birds a7e409c
+fatal: a branch named 'birds' already exists
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ vi newfile
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git add newfile
+warning: in the working copy of 'newfile', LF will be replaced by CRLF the next time Git touches it
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   newfile
+
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git log --oneline
+9b54fd2 (HEAD -> main, origin/main, animals) old
+9b5d3b9 new
+92b1f81 added
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$ git show
+commit 9b54fd2b4a31a999d4696bb641a860f3b79e0c0a (HEAD -> main, origin/main, animals)
+Author: Dattasai0612 <gadi.dattasai@gmail.com>
+Date:   Tue Jan 21 12:17:24 2025 +0530
+
+    old
+
+diff --git a/old b/old
+new file mode 100644
+index 0000000..7c7e506
+--- /dev/null
++++ b/old
+@@ -0,0 +1 @@
++hi hi hi
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/practice (main)
+$

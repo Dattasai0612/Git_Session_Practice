@@ -1,0 +1,51 @@
+Microsoft Windows [Version 10.0.26100.2605]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\DSG>cd git_session_practice
+
+C:\Users\DSG\git_session_practice>dir
+ Volume in drive C is OS
+ Volume Serial Number is FAF8-DAA4
+
+ Directory of C:\Users\DSG\git_session_practice
+
+20-01-2025  19:22    <DIR>          .
+20-01-2025  19:18    <DIR>          ..
+20-01-2025  18:51         1,125,287 Git_Session.pptx
+               1 File(s)      1,125,287 bytes
+               2 Dir(s)  125,222,027,264 bytes free
+
+C:\Users\DSG\git_session_practice>git init
+Initialized empty Git repository in C:/Users/DSG/git_session_practice/.git/
+
+C:\Users\DSG\git_session_practice>git add .
+
+C:\Users\DSG\git_session_practice>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Git_Session.pptx
+
+
+C:\Users\DSG\git_session_practice>git commit -m "20-01-25"
+[master (root-commit) 41e6f5c] 20-01-25
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Git_Session.pptx
+
+C:\Users\DSG\git_session_practice>git remote add origin https://github.com/Dattasai0612/Git_Session_Practice.git
+
+C:\Users\DSG\git_session_practice>git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1018.74 KiB | 1.02 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Dattasai0612/Git_Session_Practice.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+C:\Users\DSG\git_session_practice>
