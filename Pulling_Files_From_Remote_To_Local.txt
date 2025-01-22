@@ -1,0 +1,168 @@
+DSG@Datta MINGW64 ~
+$ cd ..
+
+DSG@Datta MINGW64 /c/Users
+$ cd DSG/
+
+DSG@Datta MINGW64 ~
+$ cd OneDrive/
+
+DSG@Datta MINGW64 ~/OneDrive
+$ cd desktop
+
+DSG@Datta MINGW64 ~/OneDrive/desktop
+$ mkdir Remote_to_Local
+
+DSG@Datta MINGW64 ~/OneDrive/desktop
+$ cd Remote_to_Local/
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/Remote_to_Local
+$ git clone https://github.com/Dattasai0612/Git_Session_HandsOn
+Cloning into 'Git_Session_HandsOn'...
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 113 (delta 23), reused 90 (delta 12), pack-reused 0 (from 0)
+Receiving objects: 100% (113/113), 1.45 MiB | 9.89 MiB/s, done.
+Resolving deltas: 100% (23/23), done.
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/Remote_to_Local
+$ cd Git_Session_HandsOn/
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/Remote_to_Local/Git_Session_HandsOn (main)
+$ git branch
+* main
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/Remote_to_Local/Git_Session_HandsOn (main)
+$ git branch -a
+* main
+  remotes/origin/Data
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/Thalaiva
+  remotes/origin/bhargav
+  remotes/origin/divya
+  remotes/origin/first
+  remotes/origin/main
+  remotes/origin/robo2
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/Remote_to_Local/Git_Session_HandsOn (main)
+$ git branch --all
+* main
+  remotes/origin/Data
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/Thalaiva
+  remotes/origin/bhargav
+  remotes/origin/divya
+  remotes/origin/first
+  remotes/origin/main
+  remotes/origin/robo2
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/Remote_to_Local/Git_Session_HandsOn (main)
+$ gitk --all &
+[1] 2025
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/Remote_to_Local/Git_Session_HandsOn (main)
+$ git fetch --all
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/Remote_to_Local/Git_Session_HandsOn (main)
+$ # Pull all branches one by one
+for branch in $(git branch -r | grep -v '\->' | sed 's/origin\///'); do
+    git checkout $branch || git checkout -b $branch origin/$branch
+    git pull origin $branch
+done
+
+# Switch back to the default branch
+git checkout main  # or master
+Switched to a new branch 'Data'
+branch 'Data' set up to track 'origin/Data'.
+From https://github.com/Dattasai0612/Git_Session_HandsOn
+ * branch            Data       -> FETCH_HEAD
+Already up to date.
+Switched to a new branch 'Thalaiva'
+branch 'Thalaiva' set up to track 'origin/Thalaiva'.
+From https://github.com/Dattasai0612/Git_Session_HandsOn
+ * branch            Thalaiva   -> FETCH_HEAD
+Already up to date.
+Switched to a new branch 'bhargav'
+branch 'bhargav' set up to track 'origin/bhargav'.
+From https://github.com/Dattasai0612/Git_Session_HandsOn
+ * branch            bhargav    -> FETCH_HEAD
+Already up to date.
+Switched to a new branch 'divya'
+branch 'divya' set up to track 'origin/divya'.
+From https://github.com/Dattasai0612/Git_Session_HandsOn
+ * branch            divya      -> FETCH_HEAD
+Already up to date.
+Switched to a new branch 'first'
+branch 'first' set up to track 'origin/first'.
+From https://github.com/Dattasai0612/Git_Session_HandsOn
+ * branch            first      -> FETCH_HEAD
+Already up to date.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+From https://github.com/Dattasai0612/Git_Session_HandsOn
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Switched to a new branch 'robo2'
+branch 'robo2' set up to track 'origin/robo2'.
+From https://github.com/Dattasai0612/Git_Session_HandsOn
+ * branch            robo2      -> FETCH_HEAD
+Already up to date.
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+DSG@Datta MINGW64 ~/OneDrive/desktop/Remote_to_Local/Git_Session_HandsOn (main)
+$ # Get a list of all remote branches
+for branch in $(git branch -r | grep -v '\->' | sed 's/origin\///'); do
+    git clone -b $branch https://github.com/Dattasai0612/Git_Session_HandsOn $branch
+done
+Cloning into 'Data'...
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 113 (delta 23), reused 90 (delta 12), pack-reused 0 (from 0)
+Receiving objects: 100% (113/113), 1.45 MiB | 8.88 MiB/s, done.
+Resolving deltas: 100% (23/23), done.
+Cloning into 'Thalaiva'...
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 113 (delta 23), reused 90 (delta 12), pack-reused 0 (from 0)
+Receiving objects: 100% (113/113), 1.45 MiB | 1.98 MiB/s, done.
+Resolving deltas: 100% (23/23), done.
+Cloning into 'bhargav'...
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 113 (delta 23), reused 90 (delta 12), pack-reused 0 (from 0)
+Receiving objects: 100% (113/113), 1.45 MiB | 6.53 MiB/s, done.
+Resolving deltas: 100% (23/23), done.
+Cloning into 'divya'...
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 113 (delta 23), reused 90 (delta 12), pack-reused 0 (from 0)
+Receiving objects: 100% (113/113), 1.45 MiB | 7.85 MiB/s, done.
+Resolving deltas: 100% (23/23), done.
+Cloning into 'first'...
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 113 (delta 23), reused 90 (delta 12), pack-reused 0 (from 0)
+Receiving objects: 100% (113/113), 1.45 MiB | 9.82 MiB/s, done.
+Resolving deltas: 100% (23/23), done.
+Cloning into 'main'...
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 113 (delta 23), reused 90 (delta 12), pack-reused 0 (from 0)
+Receiving objects: 100% (113/113), 1.45 MiB | 8.06 MiB/s, done.
+Resolving deltas: 100% (23/23), done.
+Cloning into 'robo2'...
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (76/76), done.
+remote: Total 113 (delta 23), reused 90 (delta 12), pack-reused 0 (from 0)
+Receiving objects: 100% (113/113), 1.45 MiB | 1.46 MiB/s, done.
+Resolving deltas: 100% (23/23), done.
+
